@@ -37,12 +37,12 @@ int main(){
 	while(true){
 	memset(data_recived,0,sizeof(data_recived));
         memset(data_to_send,0,sizeof(data_to_send));
-	printf("Client: ");
+	printf("You: ");
 	scanf(" %[^\n]",data_to_send);
 	send(socket_sfd,data_to_send,strlen(data_to_send),0);
 	n_b=recv(socket_sfd,data_recived,sizeof(data_recived)-1,0);
 	data_recived[n_b]='\0';
-	printf("Server: %s",data_recived);
+	printf("Instructor: %s",data_recived);
 	printf("Live status :");
 	scanf("%d",&live_status);
 	if(live_status== 1){
