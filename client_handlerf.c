@@ -20,7 +20,7 @@ int main(int argc,char * argv[]){
 	//creating the socket to handle the client end communication
 	//printf("The process id in string :%s and accept_sfd id in string :%s\n\n",argv[2],argv[1]);
 	int accept_sfd=atoi(argv[1]);
-	printf("\t\t\t CLIENT IP :%s\t\t\t\n\n",argv[3]);
+	printf("\t\t\t Student IP :%s\t\t\t\n\n",argv[3]);
 	int pid=atoi(argv[2]);
 	/*printf("The pid :%d and the process :%d\n\n",pid,accept_sfd);
 	Accessing the SFD using the inetr process inspection
@@ -45,13 +45,13 @@ while(true){
     memset(data_recived,0,sizeof(data_recived));
 	memset(data_to_send,0,sizeof(data_to_send));
 	n_b=recv(accept_sfd,data_recived,sizeof(data_recived)-1,0);
-	printf("number of bits recived :%d\n\n",n_b);
+	//printf("number of bits recived :%d\n\n",n_b);
 	data_recived[n_b]='\0';
-	printf("Client: %s\n",data_recived);
-	printf("Server: ");
+	printf("Student: %s\n",data_recived);
+	printf("You: ");
 	scanf(" %[^\n]",data_to_send);
 	send(accept_sfd,data_to_send,strlen(data_to_send),0);
-	printf("\nLive status :");
+	printf("\nCommunication status :");
 	scanf("%d",&live_status);
 	printf("\n");
 	if(live_status==1){
