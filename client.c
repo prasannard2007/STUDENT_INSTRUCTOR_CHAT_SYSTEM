@@ -43,7 +43,7 @@ int main(){
 	n_b=recv(socket_sfd,data_recived,sizeof(data_recived)-1,0);
 	data_recived[n_b]='\0';
 	printf("Instructor: %s",data_recived);
-	printf("Live status :");
+	printf("\nCommunication status :");
 	scanf("%d",&live_status);
 	if(live_status== 1){
 		continue;
