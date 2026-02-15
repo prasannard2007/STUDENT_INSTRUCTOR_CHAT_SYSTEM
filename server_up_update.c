@@ -16,7 +16,7 @@ int main(){
 	memset(&inter_addr, 0, sizeof(inter_addr));
 	inter_addr.sin_family=AF_INET;
 	inter_addr.sin_port=htons(4016);
-	inter_addr.sin_addr.s_addr=inet_addr("172.20.156.231");
+	inter_addr.sin_addr.s_addr=INADDR_ANY;
 	//bindign the socket or assiging the socket
 	int binder=bind(socket_sfd,(struct sockaddr *)&inter_addr,sizeof(struct sockaddr_in));
 	if(binder == -1){
